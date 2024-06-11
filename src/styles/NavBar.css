@@ -1,0 +1,90 @@
+.Logo {
+  width: 80px;
+  height: 50px;
+  border: none;
+}
+header {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  left: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 32px 0 25px;
+
+  background: #fff;
+  border-bottom: 1px solid white;
+
+  align-items: center;
+}
+.Desktop-view {
+  display: none;
+}
+.Desktop-view ul {
+  display: flex;
+  gap: 42px;
+}
+.Desktop-view ul li a {
+  color: #000;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.Desktop-view ul li a:hover {
+  color: blue;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 92vh;
+  background-color: #ffff;
+  align-items: center;
+  gap: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* transition: all 0.3s; */
+}
+
+.mobile-menu {
+  display: inline-block;
+}
+.mobile-nav.active {
+  display: flex; /* Display the menu on activation */
+}
+
+.iconx {
+  margin-top: 12px;
+  padding-top: 12px;
+}
+
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+li {
+  list-style: none;
+}
+/* .mobile-view {
+  display: block;
+} */
+@media (min-width: 825px) {
+  .mobile-nav,
+  .mobile-menu {
+    display: none;
+  }
+  .Desktop-view {
+    display: block;
+  }
+
+  nav {
+    padding: 10px 52px 10px 30px;
+  }
+}

@@ -1,0 +1,76 @@
+.about-me-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.workspace-img {
+  text-align: center;
+}
+.workspace-img img {
+  border-radius: 8px;
+  min-width: 80%;
+  max-width: 100%;
+  height: auto;
+}
+
+.about-me-page {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+.web,
+.mobile {
+  color: blue;
+}
+.about-me-description {
+  line-height: 1.5;
+}
+
+h3 {
+  margin-bottom: 16px;
+  color: blue;
+  font-size: 24px;
+}
+@media (min-width: 925px) {
+  .about-me-container {
+    padding: 0 22px 0 16px;
+  }
+
+  .about-me-page {
+    flex-direction: row;
+    margin-bottom: 56px;
+    gap: 48px;
+  }
+  .workspace-img img {
+    width: 400px;
+  }
+  .workspace-img,
+  .about-me-title {
+    flex: 1;
+  }
+  .workspace-img {
+    /* align-self: center; */
+  }
+}
+@media (min-width: 1024px) {
+  .about-me-description {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .workspace-img img {
+    width: 460px;
+    min-width: initial;
+    max-width: initial;
+  }
+  .workspace-img {
+    display: flex;
+  }
+
+  .about-me-page {
+    padding: 12px;
+    margin-bottom: 162px;
+    gap: 82px;
+  }
+}

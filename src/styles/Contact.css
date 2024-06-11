@@ -1,0 +1,71 @@
+.contact__container {
+  margin: 0 auto;
+  max-width: 90%;
+  padding: 0 10px;
+}
+.header-contact {
+  font-size: 25px;
+}
+.contact_box {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.contact__header p {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+.contact__content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  justify-content: center;
+  text-align: center;
+}
+.contact__details-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 48px;
+}
+
+ion-icon {
+  font-size: 30px;
+  /* color: blue; */
+}
+
+.span-icons {
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px;
+  box-shawdow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 750px) {
+  .contact__container {
+    /* padding: 0 48px; */
+  }
+  .contact__content {
+    text-align: initial;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+  .contact__header {
+    text-align: initial;
+  }
+  .contact__details-box {
+    flex-direction: row;
+    margin-bottom: 56px;
+  }
+}
