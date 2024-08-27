@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import "../styles/Home.css";
+import mypic from "../assets/images/1673815231592.jpeg"
 
 function Home() {
   return (
@@ -8,7 +9,7 @@ function Home() {
       <div className="hero-page">
         <div className="hero-img">
           <img
-            src="./src/assets/images/1673815231592.jpeg"
+            src={mypic}
             className="abdoullahi"
             alt="abdoullahi"
           />

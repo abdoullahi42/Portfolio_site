@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import "../styles/Project.css";
+import bakery from "../assets/images/bakerySite.png"
 
 function Project() {
   return (
@@ -9,7 +10,7 @@ function Project() {
         title="bakeWorld"
         description="a site where client view and order the available bakes at their own convinient time"
         link="https://github.com/abdoullahi42/stunning-cakes"
-        source="../src/assets/images/bakerySite.png"
+        source={bakery}
         liveDemo="https://abdoullahi42.github.io/stunning-cakes/"
         stack="Html, CSS,  JavaScript"
       />
