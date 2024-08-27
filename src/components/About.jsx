@@ -1,11 +1,12 @@
 import "../styles/About.css";
+import setup from "../assets/images/workspace.jpg"
 function About() {
   return (
     <section id="about">
       <div className="about-me-container">
         <div className="about-me-page">
           <div className="workspace-img">
-            <img src="./src/assets/images/workspace.jpg" alt="workspace" />
+            <img src={setup} alt="workspace" />
           </div>
           <div className="about-me-title">
             <h3>About me</h3>
