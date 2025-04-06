@@ -31,7 +31,7 @@ function NavBar() {
     <header className="sticky z-[100] top-0 left-0">
       <nav className="flex justify-between px-[25px] md:px-[30px] md:py-[10px] md:pr-[52px] bg-white border-b border-white items-center">
         <div className="logo-container">
-          <h2 className="w-[80px] h-[50px] border-none">AS</h2>
+          <h2 className="w-[80px] h-[50px] border-none font-semibold">AS</h2>
         </div>
         
         {isOpen && (
