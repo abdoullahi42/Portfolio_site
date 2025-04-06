@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/NavBar.css";
+import { FaTimes, FaBars } from "react-icons/fa";
 
 const navlinks = [
   {
@@ -28,66 +28,57 @@ function NavBar() {
   }
 
   return (
-    <header>
-      <nav>
+    <header className="sticky z-[100] top-0 left-0">
+      <nav className="flex justify-between px-[25px] md:px-[30px] md:py-[10px] md:pr-[52px] bg-white border-b border-white items-center">
         <div className="logo-container">
-          <h2 className="Logo">AS</h2>
+          <h2 className="w-[80px] h-[50px] border-none">AS</h2>
         </div>
+        
         {isOpen && (
-          <div className="mobile-nav">
-            <span className="mobile-icon mobile-menu iconx" onClick={ToggleBar}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="ionicon"
-                viewBox="0 0 512 512"
-              >
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="32"
-                  d="M368 368L144 144M368 144L144 368"
-                />
-              </svg>
+          <div className="flex flex-col w-full h-[92vh] bg-white items-center gap-3 fixed top-0 left-0">
+            <span 
+              className="mobile-icon mobile-menu mt-3 pt-3" 
+              onClick={ToggleBar}
+            >
+              <FaTimes className="text-current" />
             </span>
-            <ul onClick={ToggleBar}>
+            <ul onClick={ToggleBar} className="flex flex-col gap-2.5">
               {navlinks.map((nav) => (
-                <li key={nav.name}>
-                  <a href={nav.link}>{nav.name}</a>
+                <li key={nav.name} className="list-none">
+                  <a 
+                    href={nav.link} 
+                    className="text-black hover:text-blue-500 font-semibold text-xl"
+                  >
+                    {nav.name}
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
         )}
 
-        {/*desktop view */}
-
-        <div className="Desktop-view">
-          <ul>
+        {/* Desktop view */}
+        <div className="hidden md:block">
+          <ul className="flex gap-10">
             {navlinks.map((nav) => (
-              <li key={nav.name}>
-                <a href={nav.link}>{nav.name}</a>
+              <li key={nav.name} className="list-none">
+                <a 
+                  href={nav.link} 
+                  className="text-black hover:text-blue-500 font-semibold text-xl"
+                >
+                  {nav.name}
+                </a>
               </li>
             ))}
           </ul>
         </div>
+        
         {!isOpen && (
-          <span className="mobile-menu" onClick={ToggleBar}>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="ionicon"
-              viewBox="0 0 512 512"
-            >
-              <path
-                fill="none"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeMiterlimit="10"
-                strokeWidth="32"
-                d="M80 160h352M80 256h352M80 352h352"
-              />
-            </svg>
+          <span 
+            className="mobile-menu inline-block md:hidden" 
+            onClick={ToggleBar}
+          >
+            <FaBars className="text-current" />
           </span>
         )}
       </nav>
