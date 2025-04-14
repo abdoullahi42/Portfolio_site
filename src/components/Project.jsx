@@ -1,10 +1,21 @@
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 import bakery from "../assets/images/bakerySite.png";
+import Renewed  from "../assets/images/Renewed-You.png";
+
 
 const projects = [
   {
     id: 1,
+    title: "Renewed-You",
+    description: "Renewed-You is a user-friendly platform that connects licensed therapists with clients seeking convenient and flexible therapy sessions. It allows therapists to earn extra income by joining the platform and offering their services to a wider audience. Clients can easily find and book therapy sessions with licensed professionals, making mental health support more accessible than ever.",
+    githubLink: "https://github.com/abdoullahi42/Renewed-You",
+    image: Renewed,
+    liveDemo: "https://renewed-you.vercel.app/",
+    stack: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "superbase", ]
+  },
+  {
+    id: 2,
     title: "BakeWorld",
     description: "An e-commerce platform for a bakery where customers can browse and order delicious baked goods online.",
     githubLink: "https://github.com/abdoullahi42/stunning-cakes",
