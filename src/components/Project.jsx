@@ -2,6 +2,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
 import bakery from "../assets/images/bakerySite.png";
 import Renewed  from "../assets/images/Renewed-You.png";
+import Letsellify from "../assets/images/letsellify.png";
 
 
 const projects = [
@@ -14,16 +15,25 @@ const projects = [
     liveDemo: "https://renewed-you.vercel.app/",
     stack: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "superbase", ]
   },
-  {
-    id: 2,
-    title: "BakeWorld",
-    description: "An e-commerce platform for a bakery where customers can browse and order delicious baked goods online.",
-    githubLink: "https://github.com/abdoullahi42/stunning-cakes",
-    image: bakery,
-    liveDemo: "https://abdoullahi42.github.io/stunning-cakes/",
-    stack: ["HTML", "CSS", "JavaScript"]
-  },
+  // {
+  //   id: 2,
+  //   title: "BakeWorld",
+  //   description: "An e-commerce platform for a bakery where customers can browse and order delicious baked goods online.",
+  //   githubLink: "https://github.com/abdoullahi42/stunning-cakes",
+  //   image: bakery,
+  //   liveDemo: "https://abdoullahi42.github.io/stunning-cakes/",
+  //   stack: ["HTML", "CSS", "JavaScript"]
+  // },
   // Add more projects as needed
+  {
+    id:3,
+    title: "Letsellify",
+    description: "Letsellify Technologies Limited is a technology-anchored company vision to be an SMEs enabler. We are concerned with innovating solutions that can power SMEs sector and empowering owners to succeed in a challenging marketspace.",
+    githubLink: "https://github.com/letsellify/logistics-frontend",
+    image: Letsellify,
+    liveDemo: "https://logistics.letsellify.com/", 
+    stack: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React", "Zustand"],
+  },
 ];
 
 function Project() {
