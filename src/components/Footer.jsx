@@ -10,7 +10,7 @@ function Footer() {
           </h4>
           <div>
             <div className="footer__icons">
-              <a href="linkedin.com/in/abdoullahi-salihou-128329207">
+              <a href="https://www.linkedin.com/in/abdoullahi-salihou-128329207/">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="ionicon linkin"
