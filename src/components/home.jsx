@@ -23,7 +23,9 @@ function Home() {
             in Abuja, Nigeria
           </p>
           <div className="flex gap-4 justify-center md:justify-start mb-8">
+            <a href='https://www.linkedin.com/in/abdoullahi-salihou-128329207/'>
             <FaLinkedin className="w-[30px] h-[30px] text-blue-500 md:w-[40px] md:h-[40px]" />
+            </a>
           </div>
         </div>
       </div>
