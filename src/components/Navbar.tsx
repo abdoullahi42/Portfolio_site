@@ -1,7 +1,12 @@
 import { useState } from "react";
 import { FaTimes, FaBars } from "react-icons/fa";
 
-const navlinks = [
+interface NavLink {
+  name: string;
+  link: string;
+}
+
+const navlinks: NavLink[] = [
   {
     name: "Home",
     link: "#home",
@@ -21,10 +26,10 @@ const navlinks = [
 ];
 
 function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  function ToggleBar() {
-    setIsOpen(!isOpen);
+  function toggleBar(): void {
+    setIsOpen((prev) => !prev);
   }
 
   return (
@@ -33,20 +38,25 @@ function NavBar() {
         <div className="logo-container">
           <h2 className="w-[80px] h-[50px] border-none font-semibold">AS</h2>
         </div>
-        
+
+        {/* Mobile view */}
         {isOpen && (
-          <div className="flex flex-col w-full h-[92vh] bg-white items-center gap-3 fixed top-0 left-0">
-            <span 
-              className="mobile-icon mobile-menu mt-3 pt-3" 
-              onClick={ToggleBar}
+          <div className="flex flex-col w-full h-[92vh] bg-white items-center gap-3 fixed top-0 left-0 md:hidden">
+            <button
+              type="button"
+              className="mobile-icon mobile-menu mt-3 pt-3"
+              onClick={toggleBar}
+              aria-label="Close navigation menu"
             >
               <FaTimes className="text-current" />
-            </span>
-            <ul onClick={ToggleBar} className="flex flex-col gap-2.5">
+            </button>
+
+            <ul className="flex flex-col gap-2.5">
               {navlinks.map((nav) => (
                 <li key={nav.name} className="list-none">
-                  <a 
-                    href={nav.link} 
+                  <a
+                    href={nav.link}
+                    onClick={() => setIsOpen(false)}
                     className="text-black hover:text-blue-500 font-semibold text-xl"
                   >
                     {nav.name}
@@ -62,8 +72,8 @@ function NavBar() {
           <ul className="flex gap-10">
             {navlinks.map((nav) => (
               <li key={nav.name} className="list-none">
-                <a 
-                  href={nav.link} 
+                <a
+                  href={nav.link}
                   className="text-black hover:text-blue-500 font-semibold text-xl"
                 >
                   {nav.name}
@@ -72,14 +82,17 @@ function NavBar() {
             ))}
           </ul>
         </div>
-        
+
         {!isOpen && (
-          <span 
-            className="mobile-menu inline-block md:hidden" 
-            onClick={ToggleBar}
+          <button
+            type="button"
+            className="mobile-menu inline-block md:hidden"
+            onClick={toggleBar}
+            aria-label="Open navigation menu"
+            aria-expanded={isOpen}
           >
             <FaBars className="text-current" />
-          </span>
+          </button>
         )}
       </nav>
     </header>

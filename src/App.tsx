@@ -3,13 +3,13 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import NavBar from "./components/Navbar";
 import Project from "./components/Project";
-import Home from "./components/home";
+import Hero from "./components/Hero";
 
 function App() {
   return (
     <div>
       <NavBar />
-      <Home />
+      <Hero />
       <About />
       <Project />
       <Contact />

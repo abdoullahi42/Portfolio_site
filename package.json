@@ -6,20 +6,26 @@
   "engines": {
     "node": "24.x"
   },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
-  },
+
+"scripts": {
+  "dev": "vite",
+  "build": "tsc --noEmit && vite build",
+  "typecheck": "tsc --noEmit",
+  "lint": "eslint src --ext .ts,.tsx --report-unused-disable-directives --max-warnings 0",
+  "lint:fix": "eslint src --ext .ts,.tsx --fix",
+  "preview": "vite preview"
+},
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^5.5.0"
   },
   "devDependencies": {
+    "@types/node": "^24.19.2",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^8.74.0",
+    "@typescript-eslint/parser": "^8.74.0",
     "@vitejs/plugin-react": "^4.2.1",
     "autoprefixer": "^10.4.21",
     "eslint": "^8.57.0",
@@ -28,6 +34,7 @@
     "eslint-plugin-react-refresh": "^0.4.6",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17",
+    "typescript": "^5.9.3",
     "vite": "^5.2.0"
   }
 }
