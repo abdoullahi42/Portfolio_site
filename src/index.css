@@ -1,6 +1,6 @@
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
+@theme {
+  --font-abdu: "Poppins", sans-serif;
+}
 
